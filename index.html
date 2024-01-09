@@ -1,0 +1,186 @@
+<!DOCTYPE html> <html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&amp;display=swap" rel="stylesheet">
+<style>html {
+  height: 100%;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color:grey;
+}
+
+.container {
+   width: 1210px;
+   position: relative;
+   margin: 0px auto;
+ }
+
+.slytherine {
+  background-color: green;
+  border-radius: 50px;
+  color: black;
+  padding: 10px 100px;
+  text-align: center;
+  font-size: 20px;
+}
+.hufflepuff {
+  background-color: yellow;
+  border-radius: 50px;
+  color: black;
+  padding: 10px 100px;
+  text-align: center;
+  font-size: 20px;
+}
+.ravenclaw {
+  background-color: blue;
+  border-radius: 50px;
+  color: #363636;
+  padding: 10px 100px;
+  text-align: center;
+  font-size: 20px;
+}
+.gryfindor {
+  background-color: red;
+  border-radius: 50px;
+  color: #363636;
+  padding: 10px 100px;
+  text-align: center;
+  font-size: 20px;
+}
+.Age {
+  border-radius: 50px;
+  padding: 10px 100px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #ffebeb;
+}
+.potter {
+  width: 400px;
+}
+.result1 {
+  font-size: 30px;
+}
+.slytherine-resimg {
+  height: 375px;
+}
+.result2 {
+  font-size: 30px;
+}
+.hufflepuff-resimg {
+  height: 330px;
+}
+.result3 {
+  font-size: 30px;
+}
+.ravenclaw-resimg {
+  height: 330px;
+}
+.result4 {
+  font-size: 30px;
+}
+.grifyndor-resimg {
+  height: 330px;
+}</style></head>
+<body>
+  <div class="container">
+  <h1> <img class="potter" src="https://www.adronbuske.com/wp-content/uploads/2021/06/feat_hogwarts-houses_01.jpg"> <br> Which hogwarts house are you? </h1> 
+
+  <h2> Enter your age. </h2>
+    <input class="Age">
+  <br>
+  <br>
+  <h2> Which one of these chracter traits describes you the best? </h2>
+    <button class="slytherine"> Self reliant </button>
+    <button class="hufflepuff"> Loyal  </button>
+    <button class="ravenclaw"> Witty </button>
+    <button class="gryfindor"> Determined </button>
+    <br>
+    <br>
+    <div class="result1"> you got Slytherine! </div>
+    <br>
+    <div class="slytherine-res"> <img class="slytherine-resimg" src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/gfobj4cqe0vmsksio5nv.jpg"> </div>
+  <div class="result2"> you got hufflepuff! </div>
+    <br>
+    <div class="hufflepuff-res"> <img class="hufflepuff-resimg" src="https://assets.mugglenet.com/wp-content/uploads/2016/03/hufflepuff-banner.jpg"> </div>
+  <div class="result3"> you got Ravenclaw! </div>
+    <br>
+    <div class="ravenclaw-res"> <img class="ravenclaw-resimg" src="https://v4m9y9w9.rocketcdn.me/wp-content/uploads/2020/03/Ravenclaw-crest-F-1.jpg"> </div>
+  <div class="result4"> you got Gryfindor! </div>
+<br>
+    <div class="gryfindor-res"> <img class="gryfindor-resimg" src="https://wpmedia.makemusic.com/wp-content/uploads/2023/03/Harry-Potter-Gryffindor-house-crest-2.png"> </div>
+    <div class="times"> Times Taken: </div>
+    <button class="retake"> Retake Quiz </button>
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+  </div>
+
+
+
+<script>
+/*__POPCODESTART__*/
+$(".result1").hide();
+$(".slytherine-resimg").hide();
+$(".result2").hide();
+$(".hufflepuff-resimg").hide();
+$(".result3").hide();
+$(".ravenclaw-resimg").hide();
+$(".result4").hide();
+$(".gryfindor-resimg").hide();
+var userInputVar;
+$(".slytherine").click(function () {
+  userInputVar = $(".Age").val();
+  $(".result1").show();
+  $(".slytherine-resimg").show();
+  $(".result1").html("You are " + userInputVar + " years old, and you got Slytherine I think you're pretty cool but scary.");
+});
+$(".hufflepuff").click(function () {
+  userInputVar = $(".Age").val();
+  $(".result2").show();
+  $(".hufflepuff-resimg").show();
+  $(".result2").html("You are " + userInputVar + " years old, and you got Hufflepuff thats pretty cool you definitely would be a good friend.");
+});
+$(".ravenclaw").click(function () {
+  userInputVar = $(".Age").val();
+  $(".result3").show();
+  $(".ravenclaw-resimg").show();
+  $(".result3").html("You are " + userInputVar + " years old, and you got Ravenclaw! Your're definitely a funny but smart person.");
+});
+$(".gryfindor").click(function () {
+  userInputVar = $(".Age").val();
+  $(".result4").show();
+  $(".gryfindor-resimg").show();
+  $(".result4").html("You are " + userInputVar + " years old, and you got Gryfindor! Your're definitely a wanna be Harry potter. Stop being a band wagoner. I know the only reason you chose this was because it's red.");
+});
+$(".retake").click(function () {
+  $(".result1").hide();
+  $(".slytherine-resimg").hide();
+  $(".result2").hide();
+  $(".hufflepuff-resimg").hide();
+  $(".result3").hide();
+  $(".ravenclaw-resimg").hide();
+  $(".result4").hide();
+  $(".gryfindor-resimg").hide();
+});
+$(".slytherine").click(function () {
+  $(".times").html("Times Taken: " + 1);
+});
+$(".hufflepuff").click(function () {
+  userInputVar = $(".Sprinkle").val();
+  $(".times").html(userInputVar);
+  userInputVar = Number($(".Sprinkle").val());
+  $(".times").html("Times Taken: " + 1);
+});
+$(".ravenclaw").click(function () {
+  $(".times").html("Times Taken: " + 1);
+});
+$(".gryfindor").click(function () {
+  $(".times").html("Times Taken: " + 1);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbIiQiLCJoaWRlIiwidXNlcklucHV0VmFyIiwiY2xpY2siLCJ2YWwiLCJzaG93IiwiaHRtbCIsIk51bWJlciJdLCJtYXBwaW5ncyI6IkFBQUFBLENBQUMsQ0FBQyxVQUFELENBQUQsQ0FBY0MsSUFBZDtBQUNBRCxDQUFDLENBQUMsb0JBQUQsQ0FBRCxDQUF3QkMsSUFBeEI7QUFDQUQsQ0FBQyxDQUFDLFVBQUQsQ0FBRCxDQUFjQyxJQUFkO0FBQ0FELENBQUMsQ0FBQyxvQkFBRCxDQUFELENBQXdCQyxJQUF4QjtBQUNBRCxDQUFDLENBQUMsVUFBRCxDQUFELENBQWNDLElBQWQ7QUFDQUQsQ0FBQyxDQUFDLG1CQUFELENBQUQsQ0FBdUJDLElBQXZCO0FBQ0FELENBQUMsQ0FBQyxVQUFELENBQUQsQ0FBY0MsSUFBZDtBQUNBRCxDQUFDLENBQUMsbUJBQUQsQ0FBRCxDQUF1QkMsSUFBdkI7QUFFQSxJQUFJQyxZQUFKO0FBQ0FGLENBQUMsQ0FBQyxhQUFELENBQUQsQ0FBaUJHLEtBQWpCLENBQXVCLFlBQVc7QUFDaENELEVBQUFBLFlBQVksR0FBR0YsQ0FBQyxDQUFDLE1BQUQsQ0FBRCxDQUFVSSxHQUFWLEVBQWY7QUFDQUosRUFBQUEsQ0FBQyxDQUFDLFVBQUQsQ0FBRCxDQUFjSyxJQUFkO0FBQ0FMLEVBQUFBLENBQUMsQ0FBQyxvQkFBRCxDQUFELENBQXdCSyxJQUF4QjtBQUNBTCxFQUFBQSxDQUFDLENBQUMsVUFBRCxDQUFELENBQWNNLElBQWQsQ0FBbUIsYUFBYUosWUFBYixHQUE0QiwwRUFBL0M7QUFDRCxDQUxEO0FBT0FGLENBQUMsQ0FBQyxhQUFELENBQUQsQ0FBaUJHLEtBQWpCLENBQXVCLFlBQVc7QUFDaENELEVBQUFBLFlBQVksR0FBR0YsQ0FBQyxDQUFDLE1BQUQsQ0FBRCxDQUFVSSxHQUFWLEVBQWY7QUFDQUosRUFBQUEsQ0FBQyxDQUFDLFVBQUQsQ0FBRCxDQUFjSyxJQUFkO0FBQ0FMLEVBQUFB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JChcIi5yZXN1bHQxXCIpLmhpZGUoKTtcbiQoXCIuc2x5dGhlcmluZS1yZXNpbWdcIikuaGlkZSgpO1xuJChcIi5yZXN1bHQyXCIpLmhpZGUoKTtcbiQoXCIuaHVmZmxlcHVmZi1yZXNpbWdcIikuaGlkZSgpO1xuJChcIi5yZXN1bHQzXCIpLmhpZGUoKTtcbiQoXCIucmF2ZW5jbGF3LXJlc2ltZ1wiKS5oaWRlKCk7XG4kKFwiLnJlc3VsdDRcIikuaGlkZSgpO1xuJChcIi5ncnlmaW5kb3ItcmVzaW1nXCIpLmhpZGUoKTtcblxubGV0IHVzZXJJbnB1dFZhcjtcbiQoXCIuc2x5dGhlcmluZVwiKS5jbGljayhmdW5jdGlvbigpIHtcbiAgdXNlcklucHV0VmFyID0gJChcIi5BZ2VcIikudmFsKCk7XG4gICQoXCIucmVzdWx0MVwiKS5zaG93KCk7XG4gICQoXCIuc2x5dGhlcmluZS1yZXNpbWdcIikuc2hvdygpO1xuICAkKFwiLnJlc3VsdDFcIikuaHRtbChcIllvdSBhcmUgXCIgKyB1c2VySW5wdXRWYXIgKyBcIiB5ZWFycyBvbGQsIGFuZCB5b3UgZ290IFNseXRoZXJpbmUgSSB0aGluayB5b3UncmUgcHJldHR5IGNvb2wgYnV0IHNjYXJ5LlwiKTtcbn0pO1xuXG4kKFwiLmh1ZmZsZXB1ZmZcIikuY2xpY2soZnVuY3Rpb24oKSB7XG4gIHVzZXJJbnB1dFZhciA9ICQoXCIuQWdlXCIpLnZhbCgpO1xuICAkKFwiLnJlc3VsdDJcIikuc2hvdygpO1xuICAkKFwiLmh1ZmZsZXB1ZmYtcmVzaW1nXCIpLnNob3coKTtcbiAgJChcIi5yZXN1bHQyXCIpLmh0bWwoXCJZb3UgYXJlIFwiICsgdXNlcklucHV0VmFyICsgXCIgeWVhcnMgb2xkLCBhbmQgeW91IGdvdCBIdWZmbGVwdWZmIHRoYXRzIHByZXR0eSBjb29sIHlvdSBkZWZpbml0ZWx5IHdvdWxkIGJlIGEgZ29vZCBmcmllbmQuXCIpO1xufSk7XG5cbiQoXCIucmF2ZW5jbGF3XCIpLmNsaWNrKGZ1bmN0aW9uKCkge1xuICB1c2VySW5wdXRWYXIgPSAkKFwiLkFnZVwiKS52YWwoKTtcbiAgJChcIi5yZXN1bHQzXCIpLnNob3coKTtcbiAgJChcIi5yYXZlbmNsYXctcmVzaW1nXCIpLnNob3coKTtcbiAgJChcIi5yZXN1bHQzXCIpLmh0bWwoXCJZb3UgYXJlIFwiICsgdXNlcklucHV0VmFyICsgXCIgeWVhcnMgb2xkLCBhbmQgeW91IGdvdCBSYXZlbmNsYXchIFlvdXIncmUgZGVmaW5pdGVseSBhIGZ1bm55IGJ1dCBzbWFydCBwZXJzb24uXCIpO1xufSk7XG4kKFwiLmdyeWZpbmRvclwiKS5jbGljayhmdW5jdGlvbigpIHtcbiAgdXNlcklucHV0VmFyID0gJChcIi5BZ2VcIikudmFsKCk7XG4gICQoXCIucmVzdWx0NFwiKS5zaG93KCk7XG4gICQoXCIuZ3J5ZmluZG9yLXJlc2ltZ1wiKS5zaG93KCk7XG4gICQoXCIucmVzdWx0NFwiKS5odG1sKFwiWW91IGFyZSBcIiArIHVzZXJJbnB1dFZhciArIFwiIHllYXJzIG9sZCwgYW5kIHlvdSBnb3QgR3J5ZmluZG9yISBZb3VyJ3JlIGRlZmluaXRlbHkgYSB3YW5uYSBiZSBIYXJyeSBwb3R0ZXIuIFN0b3AgYmVpbmcgYSBiYW5kIHdhZ29uZXIuIEkga25vdyB0aGUgb25seSByZWFzb24geW91IGNob3NlIHRoaXMgd2FzIGJlY2F1c2UgaXQncyByZWQuXCIpO1xufSk7XG5cbiQoXCIucmV0YWtlXCIpLmNsaWNrKGZ1bmN0aW9uKCkge1xuICAkKFwiLnJlc3VsdDFcIikuaGlkZSgpO1xuICAkKFwiLnNseXRoZXJpbmUtcmVzaW1nXCIpLmhpZGUoKTtcbiAgJChcIi5yZXN1bHQyXCIpLmhpZGUoKTtcbiAgJChcIi5odWZmbGVwdWZmLXJlc2ltZ1wiKS5oaWRlKCk7XG4gICQoXCIucmVzdWx0M1wiKS5oaWRlKCk7XG4gICQoXCIucmF2ZW5jbGF3LXJlc2ltZ1wiKS5oaWRlKCk7XG4gICQoXCIucmVzdWx0NFwiKS5oaWRlKCk7XG4gICQoXCIuZ3J5ZmluZG9yLXJlc2ltZ1wiKS5oaWRlKCk7XG4gIH0pO1xuXG4kKFwiLnNseXRoZXJpbmVcIikuY2xpY2soZnVuY3Rpb24oKSB7XG4gICAgJChcIi50aW1lc1wiKS5odG1sKCBcIlRpbWVzIFRha2VuOiBcIiArIDEpO1xufSk7XG4kKFwiLmh1ZmZsZXB1ZmZcIikuY2xpY2soZnVuY3Rpb24oKSB7XG4gIHVzZXJJbnB1dFZhciA9ICQoXCIuU3ByaW5rbGVcIikudmFsKCk7XG4gICQoXCIudGltZXNcIikuaHRtbCh1c2VySW5wdXRWYXIpO1xuICB1c2VySW5wdXRWYXIgPSBOdW1iZXIoJChcIi5TcHJpbmtsZVwiKS52YWwoKSk7XG4gICQoXCIudGltZXNcIikuaHRtbChcIlRpbWVzIFRha2VuOiBcIiArIDEpO1xuICAgIH0pO1xuJChcIi5yYXZlbmNsYXdcIikuY2xpY2soZnVuY3Rpb24oKSB7XG4gICQoXCIudGltZXNcIikuaHRtbCggXCJUaW1lcyBUYWtlbjogXCIgKyAxKTtcbn0pO1xuJChcIi5ncnlmaW5kb3JcIikuY2xpY2soZnVuY3Rpb24oKSB7XG4gICQoXCIudGltZXNcIikuaHRtbCggXCJUaW1lcyBUYWtlbjogXCIgKyAxKTtcbn0pO1xuIl19</script></body></html>
